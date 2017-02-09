@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crystal Collector</title>
+
+      <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css">
+	  <link href="https://fonts.googleapis.com/css?family=Creepster|Fruktur|Pacifico|Abril+Fatface" rel="stylesheet">
+	  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<title></title>
+</head>
+
+	<div class = "container">
+		<div class = "row">
+			<div class = "col-xs-10 col-xs-offset-1 backdrop">
+				<div class= "row">
+		  		    <div class = "col-xs-4 ">
+			       	   <h1> CrystalsCollector!</h1>
+					</div>
+				</div>
+				<div class= "row">
+					<div class = " col-xs-7" >empty columns</div>
+				</div>
+		
+			<div class = "row">
+		 		<div class = "col-xs-4">
+			 		 <div class = "instructions">
+
+			 		 <p>You will be given a random number at the start of the game. <br><br>
+
+			 		 There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score.<br><br>
+
+			 		 You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.<br><br>
+
+			 		 The value of each crystal is hidden from you until you click on it.
+			 		 Each time when the game starts, the game will change the values of each crystal. </p>			 </div>
+				</div>
+				<div class = "col-xs-6"></div>
+			</div>
+		
+
+			<div class = "row">
+				 <div class = "col-xs-2">
+				 	<div class = "target"> Number to Guess: <span id="number-to-guess"></span></div>
+				 </div>
+				 <div  class = "disp col-xs-1 ">
+				 	<div class = "results resultDisp"></div>
+			 	</div>
+		     </div>
+
+		<div class = "row">
+			<div class = "col-xs-10">
+
+				 <div id="crystals"></div>
+			</div>
+		</div>
+		<div id= "row">
+			<div class = "col-xs-2">
+				 <div class = "total1">Your total score is:</div>
+			</div>
+			<div class = "col-xs-8"></div>
+		</div>
+		<div id= "row">
+			<div class = "col-xs-2">
+				 <div class = " total2" id = "score"></div>
+			</div>
+		</div>
+
+		</div>
+	</div>
+</div>	
+<body>
+
+<!-- Display heading -->
+
+  <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  <script src= "assets/javascript/game.js"></script>
+  <!-- <script type = "text/javascript" src= "assets/javascript/game.js"></script> -->
+
+</body>
+
+</html>

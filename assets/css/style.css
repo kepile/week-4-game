@@ -1,0 +1,63 @@
+body {
+	background-color: black;
+
+
+}
+
+.backdrop {background-image: url("../images/Cavern2.jpg");
+height: 850px;
+width: 100%;
+ background-size: 100%;
+} 
+
+#row {
+	background-color: white;
+}
+
+.instructions {
+	background-color: pink;
+	padding: 25px 25px 30px;
+
+}
+
+h1 {
+	background-color: orange;
+	padding: 10px;
+}
+
+p{
+	background-color: pink;
+	min-height: 250PX;
+}
+
+.target, 
+.resultDisp {
+	background-color: green;
+	height: 125px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+#disp{
+	padding-left: 0;
+}
+
+.target {
+	background-color: green;
+}
+
+.resultDisp {
+	background-color: lightblue;
+	/*margin-left: -5px;*/
+	padding-left: 0
+}
+
+#crystals {
+	margin: 10px 2px 2px 0;
+	height: 125px;
+}
+
+.total1, .total2 {
+	background-color: lightgreen;
+	height: 15px;
+}
