@@ -1,16 +1,19 @@
+
+// display results on the web page
+
 function showResults(wins, loss, target, msg, score ){
- // var resText = document.querySelector(".results");
  console.log("showResults");
  $(".results").text(msg);
  var newDiv = $("<div>").text("Wins: " + wins);
  $(".results").append(newDiv);
- // $(".results").append($"<newDiv>", "Wins: " + wins);
  $(".results").append("Loss: " + loss);
  $("#number-to-guess").text(targetNumber);
  $("#score").text(score);
 
 }
 
+
+// initialize buttons to be displayed
 function initializeButton(crystalBtn) {
     $("#crystals").empty();
     for (var i = 0; i < imageFile.length; i++) {
@@ -24,6 +27,7 @@ function initializeButton(crystalBtn) {
 
       };}
 
+// set the target number to be reached
 function initializeTarget() {
          var tgt = Math.round(Math.random() * (120-19))+19;
          return tgt;
@@ -40,17 +44,19 @@ var scoreTot = 0;
 var crystalBtn;
 var newGame = false;
  
-// establish the buttons
- 
-     
-     
-           initializeButton(crystalBtn);         
-           targetNumber = initializeTarget();
-           showResults(winTotal, lossTotal, targetNumber, message, scoreTot);
+
+
+// establish the web page
+      initializeButton(crystalBtn);         
+      targetNumber = initializeTarget();
+      showResults(winTotal, lossTotal, targetNumber, message, scoreTot);
+
+
+// wait for click of a button
    
        $(".crystal-button").on("click", function() {
-         
-
+       
+// if it is a new game, establish initial variables
         if (newGame) { 
           console.log("newGame");
           newGame = false;
@@ -59,6 +65,8 @@ var newGame = false;
            };
 
        console.log("mouse clicked " + $(this).data("value"));
+
+// grab the value of the button
        scoreTot += $(this).data("value");
        console.log("scoreTot after data " + scoreTot);
        
@@ -66,6 +74,7 @@ var newGame = false;
        console.log(targetNumber + " target ");
        console.log(message + " before if statement")
   
+// check if total accumulated points is equal to target or it points went over
        if (targetNumber < scoreTot) {
            console.log(scoreTot + " score ");
            console.log(targetNumber + " target ");
@@ -82,8 +91,6 @@ var newGame = false;
             initializeButton(crystalBtn);
 
             console.log("you won");
-            console.log(scoreTot + " score ");
-            console.log(targetNumber + " target ");
             
             winTotal++;
             message = "You won!";
