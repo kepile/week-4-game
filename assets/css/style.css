@@ -61,3 +61,18 @@ p{
 	background-color: lightgreen;
 	height: 15px;
 }
+
+.crystal-button {
+  width: 90px;
+  height: 90px;
+  border-style: solid;
+  padding: 2px;
+  float: left;
+  margin: 2px;
+}
+
+img {
+	  width: 90px;
+  height: 90px;
+
+}
