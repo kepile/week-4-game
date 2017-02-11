@@ -4,29 +4,31 @@ body {
 
 }
 
-.backdrop {background-image: url("../images/Cavern2.jpg");
-height: 850px;
+.backdrop {background-image: url("../images/Cavern.jpg");
+/*height: 850px;*/
+height:100%;
 width: 100%;
- background-size: 100%;
+ background-size: cover;
+ padding-bottom:10px;
 } 
 
-#row {
-	background-color: white;
-}
 
 .instructions {
-	background-color: pink;
+	background-color: #F2D8E5;
 	padding: 25px 25px 30px;
-
+    color: #34811C;
 }
 
 h1 {
-	background-color: orange;
+	background-color: #BB6D1F;
 	padding: 10px;
+	color:white;
+	font-weight: 2;
+	text-align: center;
 }
 
 p{
-	background-color: pink;
+	background-color: #F2D8E5;
 	min-height: 250PX;
 }
 
@@ -44,12 +46,15 @@ p{
 
 .target {
 	background-color: green;
+	font-size: 20pt;
+	text-align: center;
 }
 
 .resultDisp {
 	background-color: lightblue;
 	/*margin-left: -5px;*/
-	padding-left: 0
+	padding-top: 5px;
+	padding-left: 5px;
 }
 
 #crystals {
@@ -59,7 +64,19 @@ p{
 
 .total1, .total2 {
 	background-color: lightgreen;
-	height: 15px;
+	/*height: 15px;*/
+	display: block;
+    line-height: 2;
+    text-align: center;
+}
+
+
+.total2 {
+	height:80px;
+	margin-top: 3px;
+	font-size: 20pt;
+
+
 }
 
 .crystal-button {
@@ -71,8 +88,3 @@ p{
   margin: 2px;
 }
 
-img {
-	  width: 90px;
-  height: 90px;
-
-}
