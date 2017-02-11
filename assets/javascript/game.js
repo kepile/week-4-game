@@ -2,7 +2,7 @@
 // display results on the web page
 
 function showResults(wins, loss, target, msg, score ){
- console.log("showResults");
+ 
  $(".results").text(msg);
  var newDiv = $("<div>").text("Wins: " + wins);
  $(".results").append(newDiv);
@@ -21,14 +21,23 @@ function initializeButton(crystalBtn) {
         crystalBtn.addClass("crystal-button");
         crystalBtn.attr("src", imageFile[i]);
          var ranNbr = Math.floor(Math.random() * 12)+1;
-          console.log(ranNbr + " random number");
+         
         crystalBtn.attr("data-value", ranNbr); // <button data-letter="a" class="letter-button letter letter-button-color"></button>
         $("#crystals").append(crystalBtn);
 
       };}
 
+// function changeValue () {
+//   $('.crystal-button').each(function(){
+// var ranNbr = Math.floor(Math.random() * 12)+1;
+// $(this).attr("data-value", ranNbr);
+// });
+
+// }
+
+
 // set the target number to be reached
-function initializeTarget() {
+function initializeTarget(crystalBtn) {
          var tgt = Math.round(Math.random() * (120-19))+19;
          return tgt;
        }
@@ -61,36 +70,47 @@ var newGame = false;
           console.log("newGame");
           newGame = false;
           message = "";
-          targetNumber =  initializeTarget();
+        
            };
 
-       console.log("mouse clicked " + $(this).data("value"));
+      
 
 // grab the value of the button
        scoreTot += $(this).data("value");
-       console.log("scoreTot after data " + scoreTot);
-       
-       console.log(scoreTot + " score ");
-       console.log(targetNumber + " target ");
-       console.log(message + " before if statement")
   
+      
 // check if total accumulated points is equal to target or it points went over
        if (targetNumber < scoreTot) {
-           console.log(scoreTot + " score ");
-           console.log(targetNumber + " target ");
-           console.log(" you lost " + targetNumber);
            message = "You Lost!";
            newGame = true;
            lossTotal++;
-           initializeButton(crystalBtn);
+           // changeValue(crystalBtn);
+            $('.crystal-button').each(function(){
+            var ranNbr = Math.floor(Math.random() * 12)+1;
+            console.log("***************************");
+             console.log("math.random " + ranNbr);
+            $(this).attr("data-value", ranNbr);
+             
+             console.log($(this).data("value")  + "is the crystal button with this"); 
+           });
+            
+           targetNumber =  initializeTarget();
            scoreTot = 0;
 
 
        } else if (targetNumber == scoreTot) {
             
-            initializeButton(crystalBtn);
+           // changeValue(crystalBtn);
+           targetNumber =  initializeTarget();
+              $('.crystal-button').each(function(){
+            console.log("***************************");
+            var ranNbr = Math.floor(Math.random() * 12)+1;
+                console.log("math.random " + ranNbr);
 
-            console.log("you won");
+            $(this).attr("data-value", ranNbr);
+            
+            console.log($(this).data("value")  + "is the crystal button with this");
+            });
             
             winTotal++;
             message = "You won!";
