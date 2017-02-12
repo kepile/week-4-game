@@ -62,8 +62,12 @@ p{
 	height: 125px;
 }
 
-.total1, .total2 {
+.total {
 	background-color: lightgreen;
+	
+}
+.total1, .total2 {
+	/*background-color: lightgreen;*/
 	/*height: 15px;*/
 	display: block;
     line-height: 2;
